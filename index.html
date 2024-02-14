@@ -2,12 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/calendar.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets//icons/calendar.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="todo">
+      <header class="todo__header">
+        <h1>ToDo list:</h1>
+      </header>
+      <main class="todo__body">
+        <div class="todo__body-input input">
+          <label class="input__title">
+            <p>Заголовок:</p>
+            <input type="text" />
+          </label>
+          <label class="input__text">
+            <p>Заметка:</p>
+            <textarea></textarea>
+          </label>
+          <button class="input__button">Добавить</button>
+        </div>
+      </main>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
