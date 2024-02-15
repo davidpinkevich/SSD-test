@@ -2,6 +2,9 @@
   display: flex;
   gap: 10px;
   justify-content: space-between;
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
   & button {
     width: 33%;
     padding: 10px;
@@ -9,6 +12,12 @@
     font-weight: 500;
     border-radius: 4px;
     transition: all 0.2s;
+    @media (max-width: 720px) {
+      width: 100%;
+    }
+    @media (max-width: 1100px) {
+      @include adaptiv-320(font-size, 20, 16);
+    }
     &:hover {
       transform: scale(1.05);
     }
