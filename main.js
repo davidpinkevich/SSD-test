@@ -1,4 +1,4 @@
-document.querySelector("#app").innerHTML = `
-  <div>
-  </div>
-`;
+import { App } from "./js/app";
+import "./styles/general.scss";
+
+App();
