@@ -3,10 +3,15 @@ import { checkButton } from "../check-button";
 import { deleteButton } from "../delete-button";
 
 function createItem(elemnt) {
+  const target = getElement(".filters__target");
   const item = document.createElement("div");
   const items = getElement(".items");
 
-  item.classList.add("item");
+  if (target.classList.contains("filters__completed")) {
+    item.classList.add("item", "disabled");
+  } else {
+    item.classList.add("item");
+  }
   item.setAttribute("id", elemnt.id);
   item.innerHTML = `
     <div class="item__info">
