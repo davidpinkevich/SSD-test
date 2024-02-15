@@ -7,7 +7,7 @@ function handlerAddPost() {
   const input = getElement(".input__title input");
   const textarea = getElement(".input__text textarea");
 
-  if (input.value.length >= 1 || textarea.value.length >= 1) {
+  if (textarea.value.length >= 1) {
     const elemnt = {
       id: uuidv4(),
       title: input.value,
@@ -20,6 +20,9 @@ function handlerAddPost() {
 
     input.value = "";
     textarea.value = "";
+    textarea.placeholder = "";
+  } else {
+    textarea.placeholder = "Введите не менее 1 символа";
   }
 }
 
