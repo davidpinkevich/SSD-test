@@ -1,5 +1,8 @@
 @import "./normalize.scss";
 @import "./input.scss";
+@import "./item.scss";
+@import "./items.scss";
+@import "./filters.scss";
 
 body {
   background-color: rgb(201, 195, 195);
@@ -8,12 +11,51 @@ body {
 }
 
 .todo {
-  width: 600px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 600px;
+    padding: 20px 0px;
+    animation: openApp 2s;
+    top: 30px;
+  }
   &__header {
+    position: relative;
+    width: 600px;
+    top: 30px;
     font-size: 44px;
     text-align: center;
     font-weight: 700;
     color: rgb(96, 93, 99);
+    animation: header 2.5s;
+  }
+}
+
+@keyframes openApp {
+  0% {
+    top: -400px;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+@keyframes header {
+  0% {
+    top: -400px;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
   }
 }
