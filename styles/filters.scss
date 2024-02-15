@@ -1,0 +1,21 @@
+.filters {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  & button {
+    width: 33%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.2s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &__target {
+    transition: all 0.2s;
+    background-color: rgb(41, 43, 45);
+    color: white;
+  }
+}
