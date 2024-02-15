@@ -1,17 +1,22 @@
 import { getElement } from "../../utils/getElement";
+import { checkButton } from "../check-button";
+import { deleteButton } from "../delete-button";
 
 function createItem(elemnt) {
   const item = document.createElement("div");
-  const main = getElement("main");
+  const items = getElement(".items");
 
   item.classList.add("item");
-  item.setAttribute("data-id", elemnt.id);
+  item.setAttribute("id", elemnt.id);
   item.innerHTML = `
-    <h3>${elemnt.title}</h3>
-    <p>${elemnt.text}</p>
+    <div class="item__info">
+      <h3>${elemnt.title}</h3>
+      <p>${elemnt.text}</p>
+    </div>
   `;
-
-  main.append(item);
+  deleteButton(item, elemnt.id);
+  checkButton(item, elemnt.id);
+  items.append(item);
 }
 
 export { createItem };
